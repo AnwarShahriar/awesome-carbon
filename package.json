@@ -1,0 +1,14 @@
+{
+  "name": "carbon-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anwarshahriar@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.0.0"
+  }
+}
