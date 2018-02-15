@@ -62,3 +62,6 @@ typings/
 
 # Remove demo images
 carbon.png
+
+# Remove temporary downloads folder
+downloads/
