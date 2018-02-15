@@ -9,6 +9,7 @@
   "author": "anwarshahriar@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "ora": "^1.4.0",
     "puppeteer": "^1.0.0"
   }
 }
