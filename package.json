@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "carbonizer": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "anwarshahriar@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "command-line-args": "^5.0.2",
     "ora": "^1.4.0",
     "puppeteer": "^1.0.0"
   }
