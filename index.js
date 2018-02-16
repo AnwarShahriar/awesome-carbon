@@ -3,7 +3,8 @@ const path = require('path');
 const ora = require('ora');
 const puppeteer = require('puppeteer');
 
-fs.readFile('./demoscripts/Main.java', {encoding: 'utf-8'}, (err, data) => {
+const fileName = './demoscripts/Main.java';
+fs.readFile(fileName, {encoding: 'utf-8'}, (err, data) => {
     if (err) {
         throw err;
     }
@@ -18,7 +19,11 @@ fs.readFile('./demoscripts/Main.java', {encoding: 'utf-8'}, (err, data) => {
             behavior: 'allow',
             downloadPath: path.resolve(__dirname, 'downloads')
         });
-        const carbonPrefix = 'https://carbon.now.sh/?bg=rgba(171,%20184,%20195,%201)&t=seti&l=auto&ds=true&wc=true&wa=true&pv=48px&ph=32px&ln=false&code=';
+
+        const parts = fileName.split('.');
+        const langExt = parts[parts.length - 1];
+        
+        const carbonPrefix = `https://carbon.now.sh/?bg=rgba(171,%20184,%20195,%201)&t=seti&l=${langExt}&ds=true&wc=true&wa=true&pv=48px&ph=32px&ln=false&code=`;
         await page.goto(`${carbonPrefix + encodedContnt}`);
         
         spinner.succeed('Source is prepared');
